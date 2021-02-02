@@ -2,12 +2,12 @@ package hamburger
 
 import (
 	"github.com/diamondburned/arikawa/discord"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/about"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/popup"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/window"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
-	"github.com/diamondburned/gtkcord3/gtkcord/ningen"
-	"github.com/diamondburned/gtkcord3/gtkcord/semaphore"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/about"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/popup"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/window"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/ningen"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/semaphore"
 	"github.com/gotk3/gotk3/gtk"
 )
 

@@ -8,7 +8,7 @@ import (
 	"unicode"
 
 	"github.com/Xuanwo/go-locale"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/goodsign/monday"
 )
 

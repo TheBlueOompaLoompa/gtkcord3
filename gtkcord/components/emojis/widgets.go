@@ -1,8 +1,8 @@
 package emojis
 
 import (
-	"github.com/diamondburned/gtkcord3/gtkcord/cache"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/cache"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
 	"github.com/gotk3/gotk3/gtk"
 )
 

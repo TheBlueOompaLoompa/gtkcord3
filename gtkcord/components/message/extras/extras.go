@@ -6,10 +6,10 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/diamondburned/arikawa/discord"
-	"github.com/diamondburned/gtkcord3/gtkcord/cache"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
-	"github.com/diamondburned/gtkcord3/gtkcord/ningen"
-	"github.com/diamondburned/gtkcord3/gtkcord/variables"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/cache"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/ningen"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/variables"
 	"github.com/gotk3/gotk3/gdk"
 	"github.com/gotk3/gotk3/gtk"
 )

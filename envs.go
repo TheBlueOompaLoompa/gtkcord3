@@ -4,9 +4,9 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/diamondburned/gtkcord3/gtkcord/components/window"
-	"github.com/diamondburned/gtkcord3/gtkcord/variables"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/window"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/variables"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 )
 
 func LoadEnvs() {

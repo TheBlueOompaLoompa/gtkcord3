@@ -20,7 +20,7 @@
 **Required:** `go` (1.13+), `gtk`, `libhandy0`, `pkgconfig` (refer to `shell.nix`)
 
 ```sh
-go get github.com/diamondburned/gtkcord3 # auto updates
+go get github.com/TheBlueOompaLoompa/gtkcord3 # auto updates
 ~/go/bin/gtkcord3 # $GOPATH/bin/gtkcord3 or $GOBIN/gtkcord3
 ```
 

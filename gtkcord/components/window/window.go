@@ -1,9 +1,9 @@
 package window
 
 import (
-	"github.com/diamondburned/gtkcord3/gtkcord/components/animations"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/logo"
-	"github.com/diamondburned/gtkcord3/gtkcord/variables"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/animations"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/logo"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/variables"
 	"github.com/gotk3/gotk3/gdk"
 	"github.com/gotk3/gotk3/glib"
 	"github.com/gotk3/gotk3/gtk"

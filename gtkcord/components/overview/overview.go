@@ -2,7 +2,7 @@ package overview
 
 import (
 	"github.com/diamondburned/arikawa/discord"
-	"github.com/diamondburned/gtkcord3/gtkcord/ningen"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/ningen"
 	"github.com/diamondburned/handy"
 	"github.com/gotk3/gotk3/gtk"
 	"github.com/pkg/errors"

@@ -5,8 +5,8 @@ import (
 
 	"github.com/diamondburned/arikawa/discord"
 	"github.com/diamondburned/arikawa/state"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/diamondburned/ningen/md"
 	"github.com/gotk3/gotk3/gdk"
 	"github.com/gotk3/gotk3/gtk"

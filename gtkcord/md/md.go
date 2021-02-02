@@ -5,7 +5,7 @@ import (
 
 	"github.com/diamondburned/arikawa/discord"
 	"github.com/diamondburned/arikawa/state"
-	"github.com/diamondburned/gtkcord3/internal/humanize"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/humanize"
 	"github.com/diamondburned/ningen/md"
 	"github.com/gotk3/gotk3/gtk"
 	"github.com/yuin/goldmark/ast"

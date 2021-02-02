@@ -1,5 +1,5 @@
 sources:
-    - https://github.com/diamondburned/gtkcord3
+    - https://github.com/TheBlueOompaLoompa/gtkcord3
 image: nixos/unstable
 environment:
     GOPATH: '/tmp/gopath/'

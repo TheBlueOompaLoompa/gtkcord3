@@ -7,12 +7,12 @@ import (
 	"runtime/trace"
 	"time"
 
-	"github.com/diamondburned/gtkcord3/gtkcord"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/login"
-	"github.com/diamondburned/gtkcord3/gtkcord/ningen"
-	"github.com/diamondburned/gtkcord3/gtkcord/semaphore"
-	"github.com/diamondburned/gtkcord3/internal/keyring"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/login"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/ningen"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/semaphore"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/keyring"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/gotk3/gotk3/glib"
 	"github.com/gotk3/gotk3/gtk"
 

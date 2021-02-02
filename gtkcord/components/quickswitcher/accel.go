@@ -3,7 +3,7 @@ package quickswitcher
 import (
 	"sync"
 
-	"github.com/diamondburned/gtkcord3/gtkcord/components/window"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/window"
 	"github.com/gotk3/gotk3/gdk"
 	"github.com/gotk3/gotk3/gtk"
 )

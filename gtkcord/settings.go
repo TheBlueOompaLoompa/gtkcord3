@@ -3,11 +3,11 @@ package gtkcord
 import (
 	"strings"
 
-	"github.com/diamondburned/gtkcord3/gtkcord/components/preferences"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/window"
-	"github.com/diamondburned/gtkcord3/gtkcord/config"
-	"github.com/diamondburned/gtkcord3/gtkcord/md"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/preferences"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/window"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/config"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/md"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/diamondburned/handy"
 	"github.com/gotk3/gotk3/gtk"
 )

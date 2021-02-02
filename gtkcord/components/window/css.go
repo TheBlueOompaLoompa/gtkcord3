@@ -3,7 +3,7 @@ package window
 import (
 	"bytes"
 
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/gotk3/gotk3/gtk"
 	"github.com/markbates/pkger"
 )

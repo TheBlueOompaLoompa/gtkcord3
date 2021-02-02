@@ -2,12 +2,12 @@ package gtkcord
 
 import (
 	"github.com/diamondburned/arikawa/discord"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/animations"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/channel"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/guild"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/window"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/animations"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/channel"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/guild"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/window"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/gotk3/gotk3/gtk"
 )
 

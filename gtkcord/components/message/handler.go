@@ -3,7 +3,7 @@ package message
 import (
 	"github.com/diamondburned/arikawa/discord"
 	"github.com/diamondburned/arikawa/gateway"
-	"github.com/diamondburned/gtkcord3/gtkcord/semaphore"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/semaphore"
 )
 
 func (m *Messages) injectHandlers() {

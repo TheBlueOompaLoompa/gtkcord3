@@ -4,7 +4,7 @@ import (
 	"sort"
 
 	"github.com/diamondburned/arikawa/discord"
-	"github.com/diamondburned/gtkcord3/gtkcord/ningen"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/ningen"
 )
 
 type _sortStructure struct {

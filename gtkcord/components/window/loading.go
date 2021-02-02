@@ -1,7 +1,7 @@
 package window
 
 import (
-	"github.com/diamondburned/gtkcord3/gtkcord/components/animations"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/animations"
 	"github.com/gotk3/gotk3/gtk"
 )
 

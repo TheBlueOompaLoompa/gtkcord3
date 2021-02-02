@@ -4,8 +4,8 @@ import (
 	"log"
 
 	"github.com/diamondburned/arikawa/gateway"
-	"github.com/diamondburned/gtkcord3/gtkcord"
-	"github.com/diamondburned/gtkcord3/gtkcord/semaphore"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/semaphore"
 	"github.com/gotk3/gotk3/gtk"
 )
 

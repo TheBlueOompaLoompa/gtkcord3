@@ -8,7 +8,7 @@ import (
 	"github.com/diamondburned/arikawa/state"
 	"github.com/diamondburned/arikawa/utils/httputil/httpdriver"
 	"github.com/diamondburned/arikawa/utils/wsutil"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/diamondburned/ningen"
 	"github.com/pkg/errors"
 )

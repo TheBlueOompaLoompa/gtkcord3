@@ -2,11 +2,11 @@ package header
 
 import (
 	"github.com/diamondburned/arikawa/discord"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/overview"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/popup"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
-	"github.com/diamondburned/gtkcord3/gtkcord/ningen"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/overview"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/popup"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/ningen"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/gotk3/gotk3/gtk"
 )
 

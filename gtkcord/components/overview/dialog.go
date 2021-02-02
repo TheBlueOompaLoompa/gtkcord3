@@ -1,7 +1,7 @@
 package overview
 
 import (
-	"github.com/diamondburned/gtkcord3/gtkcord/components/window"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/window"
 	"github.com/diamondburned/handy"
 	"github.com/gotk3/gotk3/glib"
 	"github.com/gotk3/gotk3/gtk"

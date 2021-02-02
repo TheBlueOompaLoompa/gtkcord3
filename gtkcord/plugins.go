@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"plugin"
 
-	"github.com/diamondburned/gtkcord3/gtkcord/config"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/config"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/pkg/errors"
 )
 

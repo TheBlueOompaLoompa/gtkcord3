@@ -3,8 +3,8 @@ package header
 import (
 	"html"
 
-	"github.com/diamondburned/gtkcord3/gtkcord/components/channel"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/channel"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
 	"github.com/diamondburned/handy"
 	"github.com/gotk3/gotk3/gtk"
 	"github.com/gotk3/gotk3/pango"

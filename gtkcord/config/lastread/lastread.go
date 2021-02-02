@@ -4,8 +4,8 @@ import (
 	"sync"
 
 	"github.com/diamondburned/arikawa/discord"
-	"github.com/diamondburned/gtkcord3/gtkcord/config"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/config"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 )
 
 type State struct {

@@ -3,7 +3,7 @@ package header
 import (
 	"log"
 
-	"github.com/diamondburned/gtkcord3/gtkcord/variables"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/variables"
 	"github.com/gotk3/gotk3/gtk"
 )
 

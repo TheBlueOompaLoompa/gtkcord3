@@ -1,7 +1,7 @@
 package animations
 
 import (
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
 	"github.com/gotk3/gotk3/gtk"
 )
 

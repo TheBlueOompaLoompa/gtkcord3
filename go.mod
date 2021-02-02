@@ -1,4 +1,4 @@
-module github.com/diamondburned/gtkcord3
+module github.com/TheBlueOompaLoompa/gtkcord3
 
 go 1.13
 

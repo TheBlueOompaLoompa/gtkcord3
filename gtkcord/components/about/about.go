@@ -3,9 +3,9 @@ package about
 import (
 	"log"
 
-	"github.com/diamondburned/gtkcord3/gtkcord/components/logo"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/window"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/logo"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/window"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
 	"github.com/gotk3/gotk3/gtk"
 )
 
@@ -32,7 +32,7 @@ func Spawn() {
 	a.SetLicense("GNU General Public License v3.0")
 	a.SetLicenseType(gtk.LICENSE_GPL_3_0)
 
-	a.SetWebsite("https://github.com/diamondburned/gtkcord3")
+	a.SetWebsite("https://github.com/TheBlueOompaLoompa/gtkcord3")
 	a.SetWebsiteLabel("Source code")
 
 	// SWITCH!

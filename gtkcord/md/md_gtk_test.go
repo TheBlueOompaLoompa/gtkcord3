@@ -5,7 +5,7 @@ package md
 import (
 	"testing"
 
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/gotk3/gotk3/gtk"
 )
 

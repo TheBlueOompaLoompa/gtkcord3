@@ -11,7 +11,7 @@ import (
 
 	_ "image/jpeg"
 
-	"github.com/diamondburned/gtkcord3/gtkcord/icons"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/icons"
 	"github.com/disintegration/imaging"
 	"github.com/pkg/errors"
 )

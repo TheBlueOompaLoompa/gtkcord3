@@ -3,10 +3,10 @@ package gtkcord
 import (
 	"github.com/diamondburned/arikawa/discord"
 	"github.com/diamondburned/arikawa/gateway"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils/gdbus"
-	"github.com/diamondburned/gtkcord3/gtkcord/md"
-	"github.com/diamondburned/gtkcord3/internal/humanize"
-	"github.com/diamondburned/gtkcord3/internal/log"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils/gdbus"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/md"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/humanize"
+	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 )
 
 func (a *Application) bindNotifier() {

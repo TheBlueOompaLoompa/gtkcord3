@@ -1,8 +1,8 @@
 package header
 
 import (
-	"github.com/diamondburned/gtkcord3/gtkcord/components/guild"
-	"github.com/diamondburned/gtkcord3/gtkcord/gtkutils"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/guild"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
 	"github.com/gotk3/gotk3/gtk"
 	"github.com/pkg/errors"
 )

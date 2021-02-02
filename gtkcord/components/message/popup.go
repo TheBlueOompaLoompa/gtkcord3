@@ -2,8 +2,8 @@ package message
 
 import (
 	"github.com/diamondburned/arikawa/discord"
-	"github.com/diamondburned/gtkcord3/gtkcord/components/popup"
-	"github.com/diamondburned/gtkcord3/gtkcord/md"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/components/popup"
+	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/md"
 	"github.com/gotk3/gotk3/gdk"
 	"github.com/gotk3/gotk3/gtk"
 )
