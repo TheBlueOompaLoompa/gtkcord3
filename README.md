@@ -8,6 +8,8 @@
 
 </p>
 
+This is a modified derivative of [gtkcord3](https://github.com/diamondburned/gtkcord3), please don't contact the original author about issues with this project.
+
 ## It's time to ditch the Discord Electron application (soon).
 
 - Lighter than the official Discord application
