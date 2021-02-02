@@ -3,3 +3,4 @@ gtkcord3
 *.so
 *.dll
 AppDir/
+envs
