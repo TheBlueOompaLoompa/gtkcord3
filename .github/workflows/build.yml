@@ -1,17 +1,20 @@
 name: "Build"
 on:
-  pull_request:
   push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
 jobs:
-  tests:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: cachix/install-nix-action@v10
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
       with:
-        nix_path: nixpkgs=channel:nixos-unstable
-    - uses: workflow/nix-shell-action@v1
-      with:
-        packages: go
-        script: |
-          go build .
+        go-version: 1.15
+
+    - name: Build
+      run: go build -v .
