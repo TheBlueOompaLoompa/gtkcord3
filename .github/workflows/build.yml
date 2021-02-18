@@ -16,7 +16,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        wget https://launchpad.net/ubuntu/groovy/amd64/libhandy-0.0-0/0.0.13-2
+        wget http://launchpadlibrarian.net/477095481/libhandy-0.0-0_0.0.13-2_amd64.deb
         wget https://launchpadlibrarian.net/477095482/libhandy-0.0-dev_0.0.13-2_amd64.deb
         sudo apt install ./*.deb
         sudo apt-get update
