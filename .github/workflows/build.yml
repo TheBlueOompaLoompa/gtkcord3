@@ -16,8 +16,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get update; apt search libhandy
-        sudo apt-get update; sudo apt-get install libcairo2-dev libpango1.0-dev libgtk-3-dev libhandy-0.0-0
+        sudo apt-get update
+        echo "deb http://ftp.de.debian.org/debian sid main" | sudo tee -a /etc/apt/sources.list
+        sudo apt-get install libcairo2-dev libpango1.0-dev libgtk-3-dev libhandy-0.0-0
 
     - name: Build
       run: go build -v .
