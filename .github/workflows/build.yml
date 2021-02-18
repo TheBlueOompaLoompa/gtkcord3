@@ -16,6 +16,9 @@ jobs:
 
     - name: Install dependencies
       run: |
+        sudo apt-get install debian-keyring
+        gpg --keyserver pgp.mit.edu --recv-keys 1F41B907
+        gpg --armor --export 1F41B907 | apt-key add -
         echo "deb http://ftp.debian.org/debian stable main contrib non-free" | sudo tee -a /etc/apt/sources.list
         sudo apt-get update
         sudo apt-get install libcairo2-dev libpango1.0-dev libgtk-3-dev libhandy-0.0-0
