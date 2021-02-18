@@ -16,6 +16,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        wget http://launchpadlibrarian.net/477095467/gir1.2-handy-0.0_0.0.13-2_amd64.deb
         wget http://launchpadlibrarian.net/477095481/libhandy-0.0-0_0.0.13-2_amd64.deb
         wget https://launchpadlibrarian.net/477095482/libhandy-0.0-dev_0.0.13-2_amd64.deb
         sudo apt install ./*.deb
