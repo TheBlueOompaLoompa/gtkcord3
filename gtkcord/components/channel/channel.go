@@ -25,6 +25,7 @@ type Channel struct {
 	Name     string
 	Topic    string
 	Category bool
+	Voice    bool
 
 	unread     bool
 	stateClass string
@@ -33,7 +34,7 @@ type Channel struct {
 func createChannelRead(ch *discord.Channel, s *ningen.State) (w *Channel) {
 	w = newChannel(ch)
 
-	if ch.Type == discord.GuildCategory {
+	if ch.Type == discord.GuildCategory || ch.Type == discord.GuildVoice {
 		return
 	}
 
@@ -68,6 +69,8 @@ func createChannelRead(ch *discord.Channel, s *ningen.State) (w *Channel) {
 
 func newChannel(ch *discord.Channel) *Channel {
 	switch ch.Type {
+	case discord.GuildNews:
+		return newChannelRow(ch)
 	case discord.GuildText:
 		return newChannelRow(ch)
 	case discord.GuildCategory:
@@ -111,21 +114,22 @@ func newCategory(ch *discord.Channel) (chw *Channel) {
 		Name:     ch.Name,
 		Topic:    ch.Topic,
 		Category: true,
+		Voice:    false,
 	}
 
 	return chw
 }
 
-func newChannelRow(ch *discord.Channel) (chw *Channel) {
+func newVoiceChannelRow(ch *discord.Channel) (chw *Channel) {
 	name := `<span weight="bold">` + html.EscapeString(ch.Name) + `</span>`
 
-	hash, _ := gtk.LabelNew(`<span size="x-large" weight="bold">#</span>`)
-	hash.Show()
-	hash.SetUseMarkup(true)
-	hash.SetVAlign(gtk.ALIGN_CENTER)
-	hash.SetHAlign(gtk.ALIGN_START)
-	hash.SetMarginStart(8)
-	hash.SetMarginEnd(8)
+	channelIcon, _ := gtk.LabelNew(`<span size="x-large" weight="bold">🔊</span>`)
+	channelIcon.Show()
+	channelIcon.SetUseMarkup(true)
+	channelIcon.SetVAlign(gtk.ALIGN_CENTER)
+	channelIcon.SetHAlign(gtk.ALIGN_START)
+	channelIcon.SetMarginStart(8)
+	channelIcon.SetMarginEnd(8)
 
 	l, _ := gtk.LabelNew(name)
 	l.Show()
@@ -137,7 +141,7 @@ func newChannelRow(ch *discord.Channel) (chw *Channel) {
 	b, _ := gtk.BoxNew(gtk.ORIENTATION_HORIZONTAL, 0)
 	b.Show()
 	b.SetHAlign(gtk.ALIGN_START)
-	b.Add(hash)
+	b.Add(channelIcon)
 	b.Add(l)
 
 	r, _ := gtk.ListBoxRowNew()
@@ -159,6 +163,66 @@ func newChannelRow(ch *discord.Channel) (chw *Channel) {
 		Name:     ch.Name,
 		Topic:    ch.Topic,
 		Category: false,
+		Voice:    true,
+	}
+
+	return chw
+}
+
+func newChannelRow(ch *discord.Channel) (chw *Channel) {
+	name := `<span weight="bold">` + html.EscapeString(ch.Name) + `</span>`
+
+	string channelIconCharacter = "";
+	switch ch.Type {
+	case discord.GuildNews:
+		channelIconCharacter = `📣`
+	case discord.GuildText:
+		channelIconCharacter = `#`
+	default:
+		channelIconCharacter = `?`
+	}
+
+	channelIcon, _ := gtk.LabelNew(`<span size="x-large" weight="bold">` + channelIconCharacter + `</span>`)
+	channelIcon.Show()
+	channelIcon.SetUseMarkup(true)
+	channelIcon.SetVAlign(gtk.ALIGN_CENTER)
+	channelIcon.SetHAlign(gtk.ALIGN_START)
+	channelIcon.SetMarginStart(8)
+	channelIcon.SetMarginEnd(8)
+
+	l, _ := gtk.LabelNew(name)
+	l.Show()
+	l.SetVAlign(gtk.ALIGN_CENTER)
+	l.SetHAlign(gtk.ALIGN_START)
+	l.SetEllipsize(pango.ELLIPSIZE_END)
+	l.SetUseMarkup(true)
+
+	b, _ := gtk.BoxNew(gtk.ORIENTATION_HORIZONTAL, 0)
+	b.Show()
+	b.SetHAlign(gtk.ALIGN_START)
+	b.Add(channelIcon)
+	b.Add(l)
+
+	r, _ := gtk.ListBoxRowNew()
+	r.SetSizeRequest(-1, 16)
+	r.Show()
+	r.Add(b)
+
+	s, _ := r.GetStyleContext()
+	s.AddClass("channel")
+
+	chw = &Channel{
+		ExtendedWidget: r,
+
+		Row:      r,
+		Style:    s,
+		Label:    l,
+		ID:       ch.ID,
+		Guild:    ch.GuildID,
+		Name:     ch.Name,
+		Topic:    ch.Topic,
+		Category: false,
+		Voice:    true
 	}
 
 	return chw
@@ -174,6 +238,10 @@ func (ch *Channel) GuildID() discord.GuildID {
 
 func (ch *Channel) ChannelInfo() (name, topic string) {
 	return ch.Name, ch.Topic
+}
+
+func (ch *Channel) ChanneIsVoice() bool {
+	return ch.Voice
 }
 
 func (ch *Channel) setClass(class string) {

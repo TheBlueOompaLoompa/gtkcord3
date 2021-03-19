@@ -30,6 +30,8 @@ func filterChannels(s *ningen.State, chs []discord.Channel) []discord.Channel {
 		case discord.DirectMessage,
 			discord.GuildText,
 			discord.GuildCategory,
+			discord.GuildVoice,
+			disocrd.GuildNews,
 			discord.GroupDM:
 
 		default:
