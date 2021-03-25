@@ -56,7 +56,7 @@ func (m *Messages) menuAddReaction(msg *Message, menu gtkutils.Container) {
 			return
 		}
 
-		canAddReaction = p.Has(discord.PermissionAddReactions)
+		canAddReactions = p.Has(discord.PermissionAddReactions)
 	}
 
 	if canAddReactions {
