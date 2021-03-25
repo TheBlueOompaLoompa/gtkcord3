@@ -172,7 +172,7 @@ func newVoiceChannelRow(ch *discord.Channel) (chw *Channel) {
 func newChannelRow(ch *discord.Channel) (chw *Channel) {
 	name := `<span weight="bold">` + html.EscapeString(ch.Name) + `</span>`
 
-	string channelIconCharacter = "";
+	channelIconCharacter := "";
 	switch ch.Type {
 	case discord.GuildNews:
 		channelIconCharacter = `📣`
@@ -222,7 +222,7 @@ func newChannelRow(ch *discord.Channel) (chw *Channel) {
 		Name:     ch.Name,
 		Topic:    ch.Topic,
 		Category: false,
-		Voice:    true
+		Voice:    true,
 	}
 
 	return chw
