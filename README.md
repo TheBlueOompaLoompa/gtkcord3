@@ -48,8 +48,12 @@ go get github.com/TheBlueOompaLoompa/gtkcord3 # auto updates
 - See the messages of the selected channel
 	- [ ] Message reactions
 - Send messages
-	- [x] Emojis
+	- [ ] Emojis
+		- [ ] Show normal emojis
+		- [x] Show custom emojis
 	- [ ] Message reactions
+		- [ ] Show a menu when clicked
+		- [x] Add reaction from clipboard
 - Graphical login
 	- [x] Graphical logout
 - Hamburger menu
