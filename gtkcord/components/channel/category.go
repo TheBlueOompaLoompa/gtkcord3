@@ -31,7 +31,7 @@ func filterChannels(s *ningen.State, chs []discord.Channel) []discord.Channel {
 			discord.GuildText,
 			discord.GuildCategory,
 			discord.GuildVoice,
-			disocrd.GuildNews,
+			discord.GuildNews,
 			discord.GroupDM:
 
 		default:
