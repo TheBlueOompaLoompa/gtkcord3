@@ -19,7 +19,7 @@ This is a modified derivative of [gtkcord3](https://github.com/diamondburned/gtk
 - Uses your preferred GTK theme
 
 ## Build gtkcord
-**Required:** `go` (1.13+), `gtk`, `libhandy0`, `pkgconfig` (refer to `shell.nix`)
+**Required:** `go` (1.13+ & <1.16), `gtk`, `libhandy0`, `pkgconfig` (refer to `shell.nix`)
 
 ```sh
 go get github.com/TheBlueOompaLoompa/gtkcord3 # auto updates
