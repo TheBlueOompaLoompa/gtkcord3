@@ -5,6 +5,7 @@ go 1.13
 require (
 	github.com/Xuanwo/go-locale v0.1.0
 	github.com/alecthomas/chroma v0.7.1
+	github.com/atotto/clipboard v0.1.4
 	github.com/davecgh/go-spew v1.1.1
 	github.com/diamondburned/arikawa v1.3.2
 	github.com/diamondburned/handy v0.0.0-20200415062301-8c5fb8c91329

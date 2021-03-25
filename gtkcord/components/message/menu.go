@@ -6,6 +6,8 @@ import (
 	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/gtkutils"
 	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/gotk3/gotk3/gtk"
+	"github.com/atotto/clipboard"
+	"strings"
 )
 
 func (m *Messages) menuAddAdmin(msg *Message, menu gtkutils.Container) {
@@ -13,7 +15,7 @@ func (m *Messages) menuAddAdmin(msg *Message, menu gtkutils.Container) {
 	if !canDelete {
 		p, err := m.c.Permissions(m.GetChannelID(), m.c.Ready.User.ID)
 		if err != nil {
-			log.Errorln("Failed to get permissions:", err)
+			log.Errorln("Failed to get permissions on menuAddAdmin:", err)
 			return
 		}
 
@@ -48,23 +50,31 @@ func (m *Messages) menuAddAdmin(msg *Message, menu gtkutils.Container) {
 }
 
 func (m *Messages) menuAddReaction(msg *Message, menu gtkutils.Container) {
-	var canAddReactions = false;
-	if !canAddReactions {
-		p, err := m.c.Permissions(m.GetChannelID(), m.c.Ready.User.ID)
-		if err != nil {
-			log.Errorln("Failed to get permissions:", err)
+	canAddReactions := false
+	isDM := false
+
+	p, err := m.c.Permissions(m.GetChannelID(), m.c.Ready.User.ID)
+	if err != nil {
+		if(strings.Contains(err.Error(), "failed to get guild") != true){
+			log.Errorln("Error getting permissions", err)
+			isDM = true
+		}else{
 			return
 		}
+	}
 
+	if !isDM {
 		canAddReactions = p.Has(discord.PermissionAddReactions)
 	}
 
-	if canAddReactions {
+	if canAddReactions || isDM {
 		iReact, _ := gtk.MenuItemNewWithLabel("Add Reaction")
 		iReact.Connect("activate", func() {
 			go func() {
-				if err := m.c.DeleteMessage(m.GetChannelID(), msg.ID); err != nil {
-					log.Errorln("Error adding reaction to message:", err)
+				reactionString, _ := clipboard.ReadAll()
+				log.Println(reactionString)
+				if err := m.c.State.React(m.GetChannelID(), msg.ID, reactionString); err != nil {
+					log.Errorln("Error reacting to message:", err)
 				}
 			}()
 		})
