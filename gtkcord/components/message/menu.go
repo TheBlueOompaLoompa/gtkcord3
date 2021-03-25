@@ -72,7 +72,6 @@ func (m *Messages) menuAddReaction(msg *Message, menu gtkutils.Container) {
 		iReact.Connect("activate", func() {
 			go func() {
 				reactionString, _ := clipboard.ReadAll()
-				log.Println(reactionString)
 				if err := m.c.State.React(m.GetChannelID(), msg.ID, reactionString); err != nil {
 					log.Errorln("Error reacting to message:", err)
 				}
