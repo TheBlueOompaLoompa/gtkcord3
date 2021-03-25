@@ -55,10 +55,10 @@ func (m *Messages) menuAddReaction(msg *Message, menu gtkutils.Container) {
 
 	p, err := m.c.Permissions(m.GetChannelID(), m.c.Ready.User.ID)
 	if err != nil {
-		if(strings.Contains(err.Error(), "failed to get guild") != true){
-			log.Errorln("Error getting permissions", err)
+		if(strings.Contains(err.Error(), "failed to get guild")){
 			isDM = true
 		}else{
+			log.Errorln("Error getting permissions", err)
 			return
 		}
 	}
