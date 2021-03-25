@@ -53,6 +53,7 @@ func (m *Messages) onRightClick(msg *Message, btn *gdk.EventButton) {
 	menu, _ := gtk.MenuNew()
 
 	m.menuAddAdmin(msg, menu)
+	m.menuAddReaction(msg, menu)
 	m.menuAddDebug(msg, menu)
 
 	menu.Show()

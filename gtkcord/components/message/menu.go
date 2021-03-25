@@ -47,6 +47,32 @@ func (m *Messages) menuAddAdmin(msg *Message, menu gtkutils.Container) {
 	}
 }
 
+func (m *Messages) menuAddReaction(msg *Message, menu gtkutils.Container) {
+	var canAddReactions = false;
+	if !canAddReactions {
+		p, err := m.c.Permissions(m.GetChannelID(), m.c.Ready.User.ID)
+		if err != nil {
+			log.Errorln("Failed to get permissions:", err)
+			return
+		}
+
+		canAddReaction = p.Has(discord.PermissionAddReactions)
+	}
+
+	if canAddReactions {
+		iReact, _ := gtk.MenuItemNewWithLabel("Add Reaction")
+		iReact.Connect("activate", func() {
+			go func() {
+				if err := m.c.DeleteMessage(m.GetChannelID(), msg.ID); err != nil {
+					log.Errorln("Error adding reaction to message:", err)
+				}
+			}()
+		})
+		iReact.Show()
+		menu.Add(iReact)
+	}
+}
+
 func (m *Messages) menuAddDebug(msg *Message, menu gtkutils.Container) {
 	cpmsgID, _ := gtk.MenuItemNewWithLabel("Copy Message ID")
 	cpmsgID.Connect("activate", func() {
