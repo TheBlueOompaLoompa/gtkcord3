@@ -4,3 +4,4 @@ gtkcord3
 *.dll
 AppDir/
 envs
+__debug_bin
