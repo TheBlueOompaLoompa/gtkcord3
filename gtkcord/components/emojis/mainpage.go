@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/diamondburned/arikawa/discord"
 	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/cache"
 	"github.com/TheBlueOompaLoompa/gtkcord3/gtkcord/md"
 	"github.com/TheBlueOompaLoompa/gtkcord3/internal/log"
 	"github.com/TheBlueOompaLoompa/gtkcord3/internal/moreatomic"
+	"github.com/diamondburned/arikawa/discord"
 	"github.com/diamondburned/ningen/states/emoji"
 	"github.com/gotk3/gotk3/gdk"
 	"github.com/gotk3/gotk3/gtk"
@@ -47,6 +47,38 @@ func newMainPage(p *Picker, click func(string)) MainPage {
 
 func (page *MainPage) init(guildEmojis []emoji.Guild) {
 	page.Sections = make([]*Section, 0, len(guildEmojis))
+	/*log.Println(guildEmojis[0].Emojis[0].ID)
+	log.Println(guildEmojis[0].Emojis[0].Name)
+
+	tmpEmoji := discord.Emoji{
+		ID:            0,
+		Name:          "",
+		RoleIDs:       []discord.RoleID{},
+		User:          discord.User{},
+		RequireColons: false,
+		Managed:       false,
+		Animated:      false,
+	}
+
+	s := Section{
+		Emojis: guildEmojis[i].Emojis,
+	}
+
+	header := newHeader("Standard", "")
+
+	s.Body = newFlowBox()
+	s.RevealerBox = newRevealerBox(header, s.Body, func() {
+		page.reveal(0)
+	})
+	s.stopped.Set(true)
+
+	// Bind the revealer to the scrolled window so that expands can focus.
+	s.Revealer.SetFocusHAdjustment(page.hadj)
+	s.Revealer.SetFocusVAdjustment(page.vadj)
+
+	// Add the placeholder first.
+	page.Main.Add(s)
+	page.Sections = append(page.Sections, &s)*/
 
 	// Adding 100 guilds right now, since it's not that expensive.
 	for i, group := range guildEmojis {
