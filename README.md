@@ -9,6 +9,7 @@
 </p>
 
 This is a modified derivative of [gtkcord3](https://github.com/diamondburned/gtkcord3), please don't contact the original author about issues with this project.
+## Gtkcord3 Node JS rewrite
 There is a new project I have started which is a full rewrite of this app in typescript with node-gtk [gtkcord3-js](https://github.com/TheBlueOompaLoompa/gtkcord3-js). If that interests you please feel free to contribute to the gktcord3-js conversion project.
 
 ## It's time to ditch the Discord Electron application (soon).
